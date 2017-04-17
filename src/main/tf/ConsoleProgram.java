@@ -1,5 +1,7 @@
 package main.tf;
+
 import java.util.Scanner;
+
 /**
  * Created by Ganon on 4/14/2017.
  */

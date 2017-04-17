@@ -1,8 +1,7 @@
 package test;
+
 import org.junit.*;
 import main.tf.CompareDocs;
-import test.TestSuite;
-
 import java.io.*;
 
 /**

@@ -1,12 +1,10 @@
 package test;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
-import test.CompareDocsTest;
-import test.DocTermFrequencyTest;
-
 import java.io.*;
 
 @RunWith(Suite.class)

@@ -1,8 +1,8 @@
 package test;
+
 import org.junit.*;
 import main.tf.DocTermFrequency;
 import java.io.*;
-import test.TestSuite;
 
 /**
  * Created by Ganon on 4/14/2017.
