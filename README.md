@@ -5,7 +5,7 @@ The directory containing the documents (including the trailing \).
 The list of words (separated by spaces).  
 It then outputs a list of words and their respective document names, and frequencies.  
 
-#Example
+# Example
 Please enter directory containing document set (include final \):  
 C:\Users\Teresa\IdeaProjects\TF\SampleDocs\  
 Please enter word list:  
