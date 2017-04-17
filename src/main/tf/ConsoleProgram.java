@@ -12,7 +12,7 @@ public class ConsoleProgram {
 
     public void runConsoleProgram(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter directory containing document set:");
+        System.out.println("Please enter directory containing document set (include final \\):");
         String directory = scanner.next();
         System.out.println("Please enter word list:");
         scanner.nextLine();
