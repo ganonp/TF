@@ -19,7 +19,7 @@ public class ConsoleProgram {
         String wordsString = scanner.nextLine();
         CompareDocs temp = new CompareDocs();
         temp.docDirectory = directory;
-        temp.words = wordsString.split(" ");
+        temp.tfWordSet = wordsString.split(" ");
         temp.runProgram();
     }
 }
