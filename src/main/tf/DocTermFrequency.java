@@ -53,7 +53,7 @@ public class DocTermFrequency {
     //Counts the words in the word list for this document and places the counts in total and wordsCounts
     public void countWords(){
         try (Stream<String> docByLineStream = Files.lines(Paths.get(directory + docName)).parallel()) {
-            Stream<String> docByWordStream = docByLineStream.flatMap(DocTermFrequency::formatTextData);
+            Stream<String> docByWordStream = docByLineStream.flatMap(DocTermFrequency::formatText);
             docByWordStream.forEach(word ->{
                 if(wordIndexMap.containsKey(word)){
                     incrementWordCount(word);
@@ -67,7 +67,7 @@ public class DocTermFrequency {
     }
 
     //Removes punctuation and splits words using spaces
-    private static Stream<String> formatTextData(String line){
+    private static Stream<String> formatText(String line){
         String formattedText = line.toLowerCase().replaceAll("[^a-z ]", "");
         return Arrays.stream(formattedText.split(" "));
     }
