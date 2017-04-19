@@ -15,22 +15,22 @@ import java.util.stream.*;
 public class DocTermFrequency {
     public String directory;
     public String docName;
-    private static String[] wordList;
+    private static String[] tfWordSet;
     private static Map<String, Integer> wordIndexMap;
     private int[] wordCounts;
     private int total = 0;
 
-    public DocTermFrequency(String[] wordList, String directory, String docName){
+    public DocTermFrequency(String[] tfWordSet, String directory, String docName){
         this.directory = directory;
         this.docName = docName;
-        this.wordList = wordList;
-        wordCounts = new int[this.wordList.length];
+        this.tfWordSet = tfWordSet;
+        wordCounts = new int[this.tfWordSet.length];
     }
 
     public DocTermFrequency( String directory, String docName){
         this.directory = directory;
         this.docName = docName;
-        wordCounts = new int[this.wordList.length];
+        wordCounts = new int[this.tfWordSet.length];
     }
 
     public static void main(String[] args){
@@ -41,13 +41,13 @@ public class DocTermFrequency {
 
     //Initializes wordIndexMap so that every document counts words using the same index
     //Must be run before any other methods
-    public static void initializeWordIndex(String[] wordList1){
+    public static void initializeWordIndex(String[] tfWordSet1){
         HashMap<String,Integer> tempWordIndexMap = new HashMap<>();
-        for(int i = 0; i < wordList1.length; i++){
-            tempWordIndexMap.put(wordList1[i],i);
+        for(int i = 0; i < tfWordSet1.length; i++){
+            tempWordIndexMap.put(tfWordSet1[i],i);
         }
         wordIndexMap = Collections.unmodifiableMap(tempWordIndexMap);
-        wordList = wordList1;
+        tfWordSet = tfWordSet1;
     }
 
     //Counts the words in the word list for this document and places the counts in total and wordsCounts
