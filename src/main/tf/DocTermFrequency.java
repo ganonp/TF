@@ -87,5 +87,4 @@ public class DocTermFrequency {
         return wordCounts[wordIndexMap.get(word)];
     }
 
-
 }
