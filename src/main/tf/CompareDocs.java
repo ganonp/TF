@@ -32,7 +32,7 @@ public class CompareDocs {
         printMaxTermFrequencies();
     }
 
-    //sets the variable docs to a File[] consisting of every file in the doc
+    //sets the variable docs to a File[] consisting of every file in the docDirectory
     private void getDocNames(){
         File folder = new File(docDirectory);
         docSet = folder.listFiles();
