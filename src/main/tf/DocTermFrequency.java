@@ -54,16 +54,18 @@ public class DocTermFrequency {
     public void countWords(){
         try (Stream<String> docByLineStream = Files.lines(Paths.get(directory + docName)).parallel()) {
             Stream<String> docByWordStream = docByLineStream.flatMap(DocTermFrequency::formatText);
-            docByWordStream.forEach(word ->{
-                if(wordIndexMap.containsKey(word)){
-                    incrementWordCount(word);
-                }
-                incrementTotal();
-            });
+            docByWordStream.forEach(word -> countWord(word));
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
         }
+    }
+
+    private void countWord(String word){
+        if(wordIndexMap.containsKey(word)){
+            incrementWordCount(word);
+        }
+        incrementTotal();
     }
 
     //Removes punctuation and splits words using spaces
