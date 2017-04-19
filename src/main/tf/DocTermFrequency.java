@@ -61,6 +61,7 @@ public class DocTermFrequency {
         }
     }
 
+    //Checks if we want to get this word's term frequency, if so, counts it, also increases the total word count.
     private void countWord(String word){
         if(wordIndexMap.containsKey(word)){
             incrementWordCount(word);
